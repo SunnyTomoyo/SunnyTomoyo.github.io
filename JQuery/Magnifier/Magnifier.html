@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简易放大镜的实现</title>
+    <link rel="stylesheet" type="text/css" href="css/Magnifier.css">
+</head>
+<body>
+    <!-- 建立显示原图窗口 -->
+
+    <div class="orig">
+
+        <!-- 插入要放大的图片 -->
+        <img src="images/small.jpg" alt="" width="350">
+
+        <!-- 加入用于锁定放大区域的小框框 -->
+        <div class="blocks"></div>
+    </div>
+
+    <!-- 建立显示放大图片的窗口 -->
+    <div class="fd"><img src="images/big.jpg" alt="" style="position: absolute;">
+    </div>
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/Magnifier.js"></script>
+</body>
+</html>

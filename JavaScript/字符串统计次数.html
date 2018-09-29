@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>字符串统计次数</title>
+    </head>
+    <body>
+        <input type="text" >
+        <button>字符串统计次数</button>
+        <script type="text/javascript">
+            var btn = document.getElementsByTagName("button")[0]
+            btn.onclick = function () {
+                // 将字符串转换为数组
+                var str = document.getElementsByTagName("input")[0].value;
+                var arr = str.split('');
+                console.log(str);
+                console.log(arr);
+                var newStr = '';
+                var numCount = new Array();
+                //  将数组项的每一项和它后面的项进行比较
+
+                for (var i = 0;i<arr.length;i++) {
+                    if(arr[i]==' '){
+                        arr.splice(i,1)
+                        i--
+                    }
+                }
+                for(var i = 0;i<arr.length;i++){
+//        定义一个计数的变量
+                    var strCount = 1;
+                    for(var j = i+1;j<arr.length;j++){
+//            如果有一致的字符
+                        if(arr[i] === arr[j]){
+//                让计数的变量自加
+                            strCount++
+//                删除重复的字符
+                            arr.splice(j,1)
+//                让j自减
+                            j--
+                        }
+                    }
+                    newStr += arr[i] + ':'+strCount+','
+                    numCount[i]= strCount;
+                }
+                
+                var max= numCount[0];
+                var max_index =0;
+                for (var i =0 ;i<numCount.length;i++) {
+                    if(numCount[i]>max){
+                        max = numCount[i]
+                        max_index = i;
+                    }
+                }
+                var aa = newStr.split(',');
+                document.write('字母和他出现的次数:'+newStr+"<br />");
+                console.log(aa)
+                document.write('出现次数最多的字母和他出现的次数:'+aa[max_index])
+                console.log(numCount)
+                console.log(newStr)
+                //    var last = newStr.length-1
+            }
+            
+    
+        </script>
+
+    </body>
+</html>

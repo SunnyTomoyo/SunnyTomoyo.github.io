@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>js实现全选、反选功能</title>  
+<script type="text/javascript"> 
+var check = document.getElementsByName("checkbox");
+function checkAll(){  
+ if(check!=null&&check!=""){   
+      for(var i=0;i<check.length;i++){  
+       if(check[i].checked == false)  
+          check[i].checked = true;  
+      }  
+ }else{
+	 alert("没有复选框！");	
+ } 
+}	
+
+function uncheckAll(){  
+  if(check!=null&&check!=""){  	
+      for(var i=0;i<check.length;i++){  
+       if(check[i].checked == true)  
+        check[i].checked = false;   
+      }  
+ }else{
+	 alert("没有复选框！");	
+ }
+} 
+
+function allReserve(){  
+  if(check!=null&&check!=""){  
+      for(var i=0;i<check.length;i++){  
+       if(check[i].checked == true)
+        check[i].checked = false;  
+       else 
+        check[i].checked = true;   
+      }  
+     }  
+}   
+</script>   
+</head>  
+<body>  
+<form name="form" id="form">  
+<table align="center" width="230">
+  <tr>
+  <td width="222">
+    <input name="checkbox" type="checkbox" value="唱歌" />
+    唱歌
+  </td>
+  </tr>
+  <tr>
+  <td>
+    <input name="checkbox" type="checkbox" value="跳舞" />  
+  跳舞  </td>
+  </tr>
+  <tr>
+  <td>
+    <input name="checkbox" type="checkbox" value="声乐" />  
+  声乐  </td>
+  </tr>
+  <tr>
+  <td>
+    <input name="checkbox" type="checkbox" value="轮滑" />  
+  轮滑  </td>
+  </tr>
+  <tr>
+  <td>
+    <input name="checkbox" type="checkbox" value="运动" />  
+  运动  </td>
+  </tr>
+  <tr>
+  <td>
+    <input name="checkbox" type="checkbox" value="阅读" />  
+    阅读</td>
+  </tr>
+  <br /> 
+  <tr>
+  <td> 
+    <input type="button" value="全选" name="checkall" onClick="checkAll();"/>
+    &nbsp; 
+    <input type="button" value="全不选" name="uncheckall" onClick="uncheckAll();" />
+    &nbsp; 
+    <input type="button" value="反选" name="allReserved" onClick="allReserve();" />  </td>
+  </tr>
+  </table>  
+</form> 
+</body>  
+</html>  

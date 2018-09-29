@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>乘法表</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            for (var i=1;i<=9;i++){		//外层for循环语句
+                document.write("<table border=1 cellspacing=0 cellpadding=0 bgcolor=#87ceeb bordercolor=#cccccc>");
+                document.write("<tr>");
+                for (var k=1;k<=9-i;k++){
+                    document.write("<td width=60 align=center>");
+                    document.write("&nbsp;&nbsp;&nbsp;");
+                    document.write("</td>");
+                }
+                for (var j=i;j>=1;j--){
+                    document.write("<td width=60 align=center>");
+                    document.write(i+"*"+j+"="+i*j);  				//输出乘法算式以及计算结果
+                    document.write("</td>");
+                }
+
+                document.write("</tr>");
+                document.write("</table>");
+            }
+
+            for(var i=9;i>=1;i--){		//外层for循环语句
+                document.write("<table border=1 cellspacing=0 bgcolor=#ffb6c1 cellpadding=0 bordercolor=#cccccc>");
+                document.write("<tr>");
+                for (var k=1;k<=9-i;k++){
+                    document.write("<td width=60 align=center>");
+                    document.write("&nbsp;&nbsp;&nbsp;");
+                    document.write("</td>");
+                }
+                for (var j=i;j>=1;j--){
+                    document.write("<td width=60 align=center>");
+                    document.write(i+"*"+j+"="+i*j);  				//输出乘法算式以及计算结果
+                    document.write("</td>");
+                }
+            
+                document.write("</tr>");
+                document.write("</table>");
+            }
+
+for (var i=9;i>=1;i--){		//外层for循环语句
+    document.write("<table border=1 cellspacing=0 bgcolor=#87ceeb cellpadding=0 bordercolor=#cccccc>");
+    document.write("<tr>");
+    for (var j=i;j>=1;j--){
+        document.write("<td width=60 align=center>");
+        document.write(i+"*"+j+"="+i*j);  				//输出乘法算式以及计算结果
+        document.write("</td>");
+    }
+    for (var j=1;j<=9-i;j++){
+        document.write("<td width=60 align=center>");
+        document.write("&nbsp;&nbsp;&nbsp;");
+        document.write("</td>");
+    }
+    document.write("</tr>");
+    document.write("</table>");
+}
+
+for (var i=1;i<=9;i++){		//外层for循环语句
+    document.write("<table border=1 cellspacing=0 bgcolor=#ffb6c1 cellpadding=0 bordercolor=#cccccc>");
+    document.write("<tr>");
+    for (var j=1;j<=i;j++){
+        document.write("<td width=60 align=center>");
+        document.write(i+"*"+j+"="+i*j);  				//输出乘法算式以及计算结果
+        document.write("</td>");
+    }
+    for (var j=1;j<=9-i;j++){
+        document.write("<td width=60 align=center>");
+        document.write("&nbsp;&nbsp;&nbsp;");
+        document.write("</td>");
+    }
+    document.write("</tr>");
+    document.write("</table>");
+}
+
+
+        </script>
+    </body>
+</html>

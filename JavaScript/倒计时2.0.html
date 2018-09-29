@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>倒计时2.0</title>
+<script type="text/javascript">
+var countTime=20;//总秒钟
+function getRemainTime(){
+if(countTime>=0){
+   var seconds = countTime%60;//余数 89%60==29秒
+   var minutes = Math.floor(countTime/60);//分钟
+   if(minutes>=60){
+   var hour=Math.floor(minutes/60);
+   minutes=Math.floor((countTime-hour*60*60)/60);
+   //alert(minutes);
+   document.getElementById("remainingTime").innerHTML=hour+"小时"+minutes+"分"+seconds+"秒";
+   }else if(minutes>=1){
+      document.getElementById("remainingTime").innerHTML=minutes+"分"+seconds+"秒"; 
+    }else{
+      document.getElementById("remainingTime").innerHTML=seconds+"秒"; 
+   }
+      countTime--;
+      var t=setTimeout("getRemainTime()",1000);
+   }else{
+       clearTimeout(t);
+       confirm("考试时间结束,请提交答卷!"); 
+       
+      
+   }
+}
+</script>
+</head>
+
+<body>
+<input type="button" name="" value="开始考试" onClick="getRemainTime()"/>
+<br/>
+<br/>
+剩余时间:<div name="remainingTime" id="remainingTime"></div>
+</body>
+</html>
+<SCRIPT Language=VBScript><!--
+
+//--></SCRIPT>
