@@ -4,27 +4,51 @@
 <meta charset="utf-8">
 <title>四六级倒计时</title>
 <script type="text/javascript">
-    var start=new Date();
-    var end = new Date(2018,11,15,9,00,00);
-    var t=end-start;
+var start = new Date();
+var end = new Date(2018,11,15,9,0,0);
+var t = Math.floor((end-start)/1000);//所有的秒数
 function getRemainTime(){
-
-if(t>=0){
-	var days=Math.floor(t/(1000*60*60*24));
-	var hour=Math.floor((t-days*1000*60*60*24)/(1000*60*60));
-	var minute=Math.floor((t-days*1000*60*60*24-hour*1000*60*60)/(60*1000));
-    var second = t%60;
-   document.getElementById("remainingTime").innerHTML=days+"天"+hour+"小时"+minute+"分"+second+"秒";
-      t--;
-      var time=setTimeout("getRemainTime()",1000);
-   }
+	if (t>=0) {
+		var seconds = t%60;
+		var minutes = Math.floor(t/60);//分钟
+		var hours = Math.floor(t/3600);//小时
+		if(hours>=24){
+			var days = Math.floor(t/(3600*24));
+			var hours = Math.floor((t-days*3600*24)/3600);
+			var minutes = Math.floor((t-days*3600*24-hours*3600)/60);
+			document.getElementById("remainingTime").innerHTML=days+"日"+hours+"小时"+minutes+"分"+seconds+"秒";
+		}else if(minutes>=60){
+			var minutes = Math.floor((t-hours*3600)/60);
+			document.getElementById("remainingTime").innerHTML=hours+"小时"+minutes+"分"+seconds+"秒";
+		}else if(minutes>=1){
+			document.getElementById("remainingTime").innerHTML=minutes+"分"+seconds+"秒";
+		}else{
+			document.getElementById("remainingTime").innerHTML=seconds+"秒";
+		}
+		t--;
+        var time=setTimeout("getRemainTime()",1000);
+	}else{
+       clearTimeout(time);
+       confirm("考试时间结束,请提交答卷!"); 
+    }
 }
 </script>
 </head>
 
 <body onload="getRemainTime()">
-今年的四六级将会在2018年12月15日9：00进行
+今年的四六级将会在2017年12月23日9：00进行
 <br/>
 考试倒计时:<div name="remainingTime" id="remainingTime"></div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
