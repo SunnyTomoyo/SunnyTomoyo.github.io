@@ -11,6 +11,8 @@
 ####  反选全选  https://sunnytomoyo.github.io/JavaScript/反选全选.html
 ####  轮播图  https://sunnytomoyo.github.io/JavaScript/Carousel/Carousel.html
 #### 字符串统计次数 https://sunnytomoyo.github.io/JavaScript/字符串统计次数.html
+####  乘法表 https://sunnytomoyo.github.io/JavaScript/乘法表.html
+####  购物车商品选中  https://sunnytomoyo.github.io/JavaScript/购物车商品选中.html
 
 
 
