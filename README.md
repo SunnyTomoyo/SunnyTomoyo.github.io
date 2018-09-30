@@ -15,7 +15,7 @@
 ####  购物车商品选中  https://sunnytomoyo.github.io/JavaScript/购物车商品选中.html
 ## JQuery
 ####  JQuery实现的购物车 https://sunnytomoyo.github.io/JQuery/shopping/JQuery实现的购物车.html
-####  放大镜效果  https://sunnytomoyo.github.io/JQuery/shopping/JQuery实现的购物车.html
+####  放大镜效果  https://sunnytomoyo.github.io/JQuery/Magnifier/Magnifier.html
 
 
 
