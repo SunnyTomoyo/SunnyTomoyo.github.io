@@ -13,6 +13,10 @@
 #### 字符串统计次数 https://sunnytomoyo.github.io/JavaScript/字符串统计次数.html
 ####  乘法表 https://sunnytomoyo.github.io/JavaScript/乘法表.html
 ####  购物车商品选中  https://sunnytomoyo.github.io/JavaScript/购物车商品选中.html
+## JQuery
+####  JQuery实现的购物车 https://sunnytomoyo.github.io/JQuery/shopping/JQuery实现的购物车.html
+####  放大镜效果  https://sunnytomoyo.github.io/JQuery/shopping/JQuery实现的购物车.html
+
 
 
 
