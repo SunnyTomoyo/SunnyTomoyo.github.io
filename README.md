@@ -1,6 +1,6 @@
 ## HTML-CSS
 ####  照片墙 https://sunnytomoyo.github.io/HTML-CSS/照片墙/zhaopianqiang.html
-####  放大镜效果  https://sunnytomoyo.github.io/Magnifier/Magnifier.html
+####  3d柱形图  https://sunnytomoyo.github.io/HTML-CSS/3d柱形图/index.html
 ####  marquee滚动效果  https://sunnytomoyo.github.io/ScrollingMessage/marquee.html
 ####  信息滚动页面（间歇）  https://sunnytomoyo.github.io/ScrollingMessage/Scrolling-Message-interval.html
 ####  信息滚动页面（无缝hover）  https://sunnytomoyo.github.io/ScrollingMessage/Scrolling-Message-hover.html
